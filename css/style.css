@@ -144,15 +144,15 @@ body {
 
 /* FIGHT CONTAINER */
 /* PLAYER ZONE */
-#player-zone {
+/* #player-zone {
   height: 100%;
   width: 450px;
   display: flex;
-}
+} */
 
 #block-history {
   height: 100%;
-  width: 30%;
+  width: 135px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -179,13 +179,13 @@ body {
   background-position: center;
   transform: scaleX(-1);
   height: 100%;
-  width: 70%;
+  width: 315px;
 }
 
 /* ENEMY ZONE */
 #enemy-zone {
   height: 100%;
-  width: calc(100% - 450px);
+  flex-grow: 1;
   display: flex;
 }
 
