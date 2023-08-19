@@ -1,0 +1,17 @@
+.attack {
+  background-color: oklch(54.56% 0.185 22.76);
+}
+
+.card-name.attack,
+.card-description.attack {
+  background-color: oklch(54.85% 0.136 22.76);
+}
+
+.block {
+  background-color: oklch(70% 0.165 128.65);
+}
+
+.card-name.block,
+.card-description.block {
+  background-color: oklch(69.26% 0.133 128.65);
+}

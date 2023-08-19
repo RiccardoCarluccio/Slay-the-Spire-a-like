@@ -1,0 +1,361 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid black;
+}
+
+body {
+  background-color: #838493;
+  height: 100dvh;
+  width: 100dvw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* MAIN CONTAINERS */
+#owl-container {
+  height: calc(100% - 175px);
+  display: flex;
+}
+
+#cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* IN THE OWL CONTAINER */
+#menu-fight-container {
+ height: 100%;
+ width: calc(100% - 200px);
+}
+
+#menu-container {
+  height: 135px;
+  display: flex;
+}
+
+#fight-container {
+  height: calc(100% - 135px);
+  display: flex;
+}
+
+#enemy-stats-container {
+  width: 200px;
+}
+
+/* MENU CONTAINER */
+#settings {
+  width: 200px;
+}
+
+#equip {
+  width: 100px;
+}
+
+#player-bars-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* PLAYER BARS */
+#energy-hp-container {
+  position: relative;
+}
+
+#energy-meter {
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+.energy-segment {
+  background-color: oklch(70% 0.148 72.53);
+}
+
+#negative-meter {
+  display: flex;
+}
+
+.negative-segment {
+  background-color: oklch(64.4% 0.21 27);
+}
+
+#last-chance,
+#hp-meter {
+  background-color: oklch(53.97% 0.133 128.65);
+}
+
+#chance-nrg-hp-container,
+#ult-container {
+  display: flex;
+}
+
+#excess-energy {
+  background-color: oklch(60.74% 0.173 40.76);
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#last-chance {
+  height: 50px;
+  aspect-ratio: 3/5;
+}
+
+#energy-meter,
+#negative-meter,
+#hp-meter,
+#ult-meter {
+  height: 25px;
+  width: 550px;
+}
+
+#ult-meter {
+  background-color: oklch(64.4% 0.057 247.24);
+  height: 25px;
+  width: 610px;
+  display: flex;
+}
+
+.ult-segment {
+  background-color: oklch(46.32% 0.057 201.71);
+}
+
+#ultimate-button {
+  background-color: oklch(41.91% 0.104 251.47);
+  height: 60px;
+  aspect-ratio: 2/3;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FIGHT CONTAINER */
+/* PLAYER ZONE */
+#player-zone {
+  height: 100%;
+  width: 300px;
+  display: flex;
+}
+
+#block-history {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#block-counter,
+#card-history {
+  height: 60px;
+  aspect-ratio: 1/1;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#block-counter {
+  background-color: oklch(71.62% 0.094 201.71);
+}
+
+#character-zone {
+  height: 100%;
+  width: 65%;
+}
+
+/* ENEMY ZONE */
+#enemy-zone {
+  height: 100%;
+  width: calc(100% - 300px);
+  display: flex;
+}
+
+#counters {
+  height: 100%;
+  width: 20%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+#stance,
+#combo-counter,
+#last-damage-dealt,
+#turn-damage {
+  height: calc(100% / 5);
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+#stance-caption,
+#combo-caption,
+#damage-caption,
+#turn-caption {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#stance-value,
+#combo-value,
+#damage-value,
+#turn-value {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#enemy-place {
+  height: 100%;
+  flex-grow: 1;
+}
+
+/* CARDS CONTAINER */
+#discard-pile {
+  position: relative;
+  height: 175px;
+  flex-grow: 1;
+}
+
+#hand {
+  height: 175px;
+  width: 750px;
+  background-color: #e77a7a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#draw-end {
+  height: 175px;
+  flex-grow: 1;
+  display: flex;
+}
+
+#draw-pile,
+#end-turn-container {
+  width: 50%;
+}
+
+#draw-pile {
+  position: relative;
+}
+
+#end-turn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARDS - DISCARD PILE */
+.card {
+  width: 100px;
+  aspect-ratio: 5/7;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.absolute-card {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+#discard-pile .card:nth-child(1) {
+  background-color: oklch(58.68% 0.22 354.18);
+  transform: translate(-16%) rotate(-10deg);
+}
+
+#discard-pile .card:nth-child(2) {
+  background-color: oklch(53.09% 0.239 264.18);
+  transform: translate(-8%) rotate(-5deg);
+}
+
+#discard-pile .card:nth-child(3) {
+  background-color: oklch(66.62% 0.187 138.18);
+}
+
+#discard-pile .card:nth-child(4) {
+  background-color: oklch(58.09% 0.222 28.06);
+  transform: translate(8%) rotate(5deg);
+}
+
+/* CARDS - HAND */
+.card-in-hand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.card-name {
+  width: 100%;
+  height: 20%;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-img {
+  width: 100%;
+  height: 40%;
+}
+
+.card-description {
+  width: 100%;
+  height: 40%;
+  border-radius: 0 0 5px 5px;
+}
+
+/* CARDS - DRAW PILE */
+#draw-pile .card:nth-child(4) {
+  background-image: url("../imgs/asso_di_bastoni.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: translate(-5%, -5%);
+}
+
+#draw-pile .card:nth-child(3) {
+  transform: translate(-2.5%, -2.5%);
+}
+
+#draw-pile .card:nth-child(1) {
+  transform: translate(2.5%, 2.5%);
+}
+
+#draw-pile .draw-card {
+  background-color: cadetblue;
+}
+
+/* END TURN */
+#end-turn {
+  height: 125px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  white-space: nowrap;
+  letter-spacing: -2px;
+  font-weight: 600;
+  outline: 2px solid black;
+  color: white;
+  background-color: oklch(63.38% 0.202 23.82);
+  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+             1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+}

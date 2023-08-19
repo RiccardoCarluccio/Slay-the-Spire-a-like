@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <title>Genshin the Spire</title>
+</head>
+<body>
+  <div id="owl-container">
+    <div id="menu-fight-container">
+      <div id="menu-container">
+        <div id="settings"></div>
+        <div id="equip"></div>
+        
+        <div id="player-bars-container">
+          <div id="player-bars">
+            <div id="chance-nrg-hp-container">
+              <div id="last-chance"></div>
+              <div id="energy-hp-container">
+                <div id="energy-meter"></div>
+                <div id="negative-meter"></div>
+                <div id="hp-meter"></div>
+              </div>
+              <div id="surplus-energy-meter"></div>
+              <div id="excess-energy"></div>
+            </div>  
+
+            <div id="ult-container">
+              <div id="ult-meter"></div>
+            </div>
+          </div>
+
+          <div id="ultimate-button"></div>
+        </div>
+      </div>
+
+      <div id="fight-container">
+        <div id="player-zone">
+          <div id="block-history">
+            <div id="block-counter"></div>
+            <div id="card-history"></div>
+          </div>
+          <div id="character-zone"></div>
+        </div>
+
+        <div id="enemy-zone" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <div id="counters">
+            <div id="stance">
+              <div id="stance-caption"></div>
+              <div id="stance-value"></div>
+            </div>
+            <div id="combo-counter">
+              <div id="combo-caption"></div>
+              <div id="combo-value"></div>
+            </div>
+            <div id="last-damage-dealt">
+              <div id="damage-caption"></div>
+              <div id="damage-value"></div>
+            </div>
+            <div id="turn-damage">
+              <div id="turn-caption"></div>
+              <div id="turn-value"></div>
+            </div>
+          </div>
+          <div id="enemy-place"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="enemy-stats-container">
+
+    </div>
+  </div>
+
+  <div id="cards-container">
+    <div id="discard-pile">
+      <div class="card absolute-card discarded-card"></div>
+      <div class="card absolute-card discarded-card"></div>
+      <div class="card absolute-card discarded-card"></div>
+      <div class="card absolute-card discarded-card"></div>
+    </div>
+
+    <div id="hand"></div>
+
+    <div id="draw-end">
+      <div id="draw-pile">
+        <div class="card absolute-card draw-card"></div>
+        <div class="card absolute-card draw-card"></div>
+        <div class="card absolute-card draw-card"></div>
+        <div class="card absolute-card draw-card"></div>
+      </div>
+
+      <div id="end-turn-container">
+        <div id="end-turn">End Turn</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="javascript/card-functions.js"></script>
+  <script src="javascript/card-databases/apertura-card-database.js"></script>
+  <script src="javascript/characters/player-characters-database.js"></script>
+  <script src="javascript/characters/enemy-characters-database.js"></script>
+  <script src="javascript/characters/spawned-enemy.js"></script>
+  <script src="javascript/starting-decks/apertura-deck.js"></script>
+  <script src="javascript/functions.js"></script>
+  <script src="javascript/main.js"></script>
+
+</body>
+</html>

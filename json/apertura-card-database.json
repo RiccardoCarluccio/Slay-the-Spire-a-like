@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Jab",
+    "attack type": "left punch"
+  },
+  {
+    "name": "Cross Punch",
+    "attack type": "right punch"
+  },
+  {
+    "name": "High Guard",
+    "block": 0
+  },
+  {
+    "name": "Right Shoulder Duck"
+  }
+]
