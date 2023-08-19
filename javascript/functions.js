@@ -40,13 +40,23 @@ function displayCards() {
   const CARD_IN_HAND = document.getElementById("hand");
   CARD_IN_HAND.innerHTML = "";
   for(let i=0; i<HAND.length; i++) {
-    CARD_IN_HAND.innerHTML += `
-      <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
-        <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
-        <div class="card-img"></div>
-        <div class="card-description ${HAND[i].cardType}"></div>
-      </div>
-    `
+    if(HAND[i].cardType === "attack") {
+      CARD_IN_HAND.innerHTML += `
+        <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
+          <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
+          <div class="card-img"></div>
+          <div class="card-description ${HAND[i].cardType}">Damage: ${calculateDamage(HAND[i])}</div>
+        </div>
+      `
+    } else if (HAND[i].cardType === "block") {
+      CARD_IN_HAND.innerHTML += `
+        <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
+          <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
+          <div class="card-img"></div>
+          <div class="card-description ${HAND[i].cardType}">Block: ${calculateBlock(HAND[i])}</div>
+        </div>
+      `
+    }
   }
 }
 
