@@ -172,18 +172,18 @@ body {
   background-color: oklch(71.62% 0.094 201.71);
 }
 
-#character-zone {
+#player-zone {
   background-image: url("../imgs/xerath.png");
-  background-size: contain;
+  background-size: 315px;
   background-repeat: no-repeat;
   background-position: center;
   transform: scaleX(-1);
   height: 100%;
-  width: 315px;
+  width: 350px;
 }
 
 /* ENEMY ZONE */
-#enemy-zone {
+#fight-zone {
   height: 100%;
   flex-grow: 1;
   display: flex;
@@ -191,7 +191,7 @@ body {
 
 #counters {
   height: 100%;
-  width: 20%;
+  width: 15%;
   padding: 2%;
   display: flex;
   flex-direction: column;
@@ -204,7 +204,7 @@ body {
 #combo-counter,
 #last-damage-dealt,
 #turn-damage {
-  height: calc(100% / 7);
+  height: calc(100% / 9);
   width: 100%;
   display: flex;
   position: relative;
@@ -228,7 +228,7 @@ body {
   bottom: 0;
 }
 
-#enemy-place {
+#enemy-zone {
   height: 100%;
   flex-grow: 1;
   position: relative;

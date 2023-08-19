@@ -11,6 +11,7 @@ const aperturaCardDatabase = [
     baseDamage: 1,
     ADscaling: 0.5,
     APscaling: 0.2,
+    description: ["Stance > Left"],
   },
   {
     cardName: "High Guard",
@@ -22,6 +23,7 @@ const aperturaCardDatabase = [
     baseBlock: 3,
     DEFscaling: 1,
     DEXscaling: 0,
+    description: ["Stance > Balanced"],
   },
   {
     cardName: "Cross Punch",
@@ -33,6 +35,7 @@ const aperturaCardDatabase = [
     baseDamage: 1,
     ADscaling: 0.7,
     APscaling: 0.2,
+    description: ["Stance > Right"],
   },
   {
     cardName: "Right Shoulder Duck",
@@ -44,5 +47,6 @@ const aperturaCardDatabase = [
     baseBlock: 0.5,
     DEFscaling: 0,
     DEXscaling: 0.5,
+    description: ["Stance > Right"],
   }
 ]

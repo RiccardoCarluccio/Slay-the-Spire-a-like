@@ -45,17 +45,17 @@ function displayCards() {
         <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
           <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
           <div class="card-img"></div>
-          <div class="card-description ${HAND[i].cardType}">Damage: ${calculateDamage(HAND[i])}</div>
+          <div class="card-description ${HAND[i].cardType}">Damage: ${calculateDamage(HAND[i])} <br> ${HAND[i].description}</div>
         </div>
-      `
+      `;
     } else if (HAND[i].cardType === "block") {
       CARD_IN_HAND.innerHTML += `
         <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
           <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
           <div class="card-img"></div>
-          <div class="card-description ${HAND[i].cardType}">Block: ${calculateBlock(HAND[i])}</div>
+          <div class="card-description ${HAND[i].cardType}">Block: ${calculateBlock(HAND[i])} <br> ${HAND[i].description}</div>
         </div>
-      `
+      `;
     }
   }
 }
@@ -205,6 +205,7 @@ function drop(ev) {
     discardOneCard(PLAYED_CARD_INDEX);
     
     displayStats();
+    displayCards();
   }
 
   /* CODICE ENERGIA NEGATIVA */
