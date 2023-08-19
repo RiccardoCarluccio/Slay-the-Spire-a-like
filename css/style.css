@@ -28,7 +28,7 @@ body {
 /* IN THE OWL CONTAINER */
 #menu-fight-container {
  height: 100%;
- width: calc(100% - 200px);
+ width: calc(100% - 230px);
 }
 
 #menu-container {
@@ -42,16 +42,19 @@ body {
 }
 
 #enemy-stats-container {
-  width: 200px;
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* MENU CONTAINER */
 #settings {
-  width: 200px;
+  width: 135px;
 }
 
 #equip {
-  width: 100px;
+  width: 135px;
 }
 
 #player-bars-container {
@@ -142,13 +145,13 @@ body {
 /* PLAYER ZONE */
 #player-zone {
   height: 100%;
-  width: 300px;
+  width: 450px;
   display: flex;
 }
 
 #block-history {
   height: 100%;
-  width: 35%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -170,13 +173,13 @@ body {
 
 #character-zone {
   height: 100%;
-  width: 65%;
+  width: 70%;
 }
 
 /* ENEMY ZONE */
 #enemy-zone {
   height: 100%;
-  width: calc(100% - 300px);
+  width: calc(100% - 450px);
   display: flex;
 }
 
@@ -228,12 +231,12 @@ body {
 #discard-pile {
   position: relative;
   height: 175px;
-  flex-grow: 1;
+  width: 300px;
 }
 
 #hand {
   height: 175px;
-  width: 750px;
+  width: 1000px;
   background-color: #e77a7a;
   display: flex;
   justify-content: center;
