@@ -10,9 +10,14 @@ let ultimateCharge = 0;
 let rightSyncro = false;
 let turnsPassed = 0;
 
+let enemyOffense = 0;
+let enemyDefense = 0;
+
 const HAND = [];
 const DISCARD_PILE = [];
 const ULT_VALUE = 10;
+
+const ENEMY_FUNCTIONS = [];
 
 drawHandSizeCards();
 console.log("DISCARD_PILE: ", DISCARD_PILE);
@@ -22,9 +27,10 @@ console.log("APERTURA_CHAR: ", APERTURA_CHAR);
 console.log("DUMMY: ", SPAWNED_ENEMY);
 
 displayCards();
-displayStats();
 negativeEnergy();
 displayEnemyHp();
+displayEnemyActions();
+displayStats();
 
 document.getElementById("end-turn").addEventListener('click', endTurn);
 document.getElementById("ultimate-button").addEventListener('click', ultimateButton);

@@ -10,21 +10,30 @@ function calculateEnemyBlock(card) {
   return PLAYED_CARD_BLOCK;
 }
 
-function enemyTurn() {
+function displayEnemyActions() {
   for(let i=0; i<SPAWNED_ENEMY.actions; i++) {
     const RANDOM_INDEX = Math.floor(Math.random() * SPAWNED_ENEMY_DECK.length);
-    const ENEMY_ACTION = SPAWNED_ENEMY_DECK[RANDOM_INDEX];
-    ENEMY_ACTION.cardFunction();
+    const RANDOM_CARD = SPAWNED_ENEMY_DECK[RANDOM_INDEX];
 
-    if(SPAWNED_ENEMY_DECK[RANDOM_INDEX].cardType === "attack") {
-      const ENEMY_DAMAGE = (APERTURA_CHAR.turnBlock - calculateEnemyDamage(ENEMY_ACTION));
+    ENEMY_FUNCTIONS.push(RANDOM_CARD.cardFunction);
+
+    if(RANDOM_CARD.cardType === "attack") {
+      enemyOffense += calculateEnemyDamage(RANDOM_CARD);
+    } else if(RANDOM_CARD.cardType === "block") {
+      enemyDefense += calculateEnemyBlock(RANDOM_CARD);
+    }    
+  }
+}
+
+function enemyTurn() {
+      const ENEMY_DAMAGE = (APERTURA_CHAR.turnBlock - enemyOffense);
       if(ENEMY_DAMAGE < 0) {
         APERTURA_CHAR.HP += ENEMY_DAMAGE;
       }
-    } else if(SPAWNED_ENEMY_DECK[RANDOM_INDEX].cardType === "block") {
-      SPAWNED_ENEMY.turnBlock += calculateEnemyBlock(ENEMY_ACTION);
-    }
-  }
+      SPAWNED_ENEMY.turnBlock += enemyDefense;
+  // for(let i=0; i<ENEMY_FUNCTIONS.length; i++) {
+    
+  // }
 }
 
 function dummyBasicAttack() {
