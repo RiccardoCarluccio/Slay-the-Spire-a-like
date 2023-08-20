@@ -193,29 +193,20 @@ body {
   gap: 1rem;
 }
 
-#stance,
-#combo-counter,
-#last-damage-dealt,
-#turn-damage {
+.counter-container {
   height: calc(100% / 9);
   width: 100%;
   display: flex;
   position: relative;
 }
 
-#stance-caption,
-#combo-caption,
-#damage-caption,
-#turn-caption {
+.counter-caption {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-#stance-value,
-#combo-value,
-#damage-value,
-#turn-value {
+.counter-value {
   position: absolute;
   right: 0;
   bottom: 0;

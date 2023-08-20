@@ -4,6 +4,7 @@ function displayStats() {
   //document.getElementById("energy-meter").innerHTML = "ENERGY = " + APERTURA_CHAR.energy;
   displayEnergy();
   document.getElementById("enemy-stats-container").innerHTML = "ENEMY HP = " + SPAWNED_ENEMY.HP;
+  document.getElementById("ended-caption").innerHTML = "TURNS PASSED";
   document.getElementById("stance-caption").innerHTML = "STANCE";
   document.getElementById("stance-value").innerHTML = APERTURA_CHAR.stance.toUpperCase();
   document.getElementById("combo-caption").innerHTML = "COMBO";
@@ -14,6 +15,7 @@ function displayStats() {
 }
 
 function resetCounters() {
+  document.getElementById("ended-value").innerHTML = turnsPassed;
   document.getElementById("combo-value").innerHTML = comboCounter;
   document.getElementById("damage-value").innerHTML = damageCounter;
   document.getElementById("turn-value").innerHTML = turnDamage;
@@ -181,6 +183,7 @@ function endTurn() {
   rightSyncro = false;
   APERTURA_CHAR.energy = PLAYER_CHARACTERS[0].energy;
 
+  turnsPassed++;
   resetCounters();  
   displayEnergy();
 
@@ -198,6 +201,8 @@ function allowDrop(ev) {
 function drag(ev) {
   // ev.dataTransfer.setData("text", ev.target.id);
   ev.dataTransfer.setData("text", ev.target.dataset.cardIndex);
+  // const cardIndex = parseInt(ev.dataTransfer.getData("text"));
+  // document.getElementById("card-in-hand-" + cardIndex).classList.add("hide");
 }
 
 function drop(ev) {

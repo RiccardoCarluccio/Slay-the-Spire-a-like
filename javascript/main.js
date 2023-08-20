@@ -8,6 +8,7 @@ let turnDamage = 0;
 let comboCounter = 0;
 let ultimateCharge = 0;
 let rightSyncro = false;
+let turnsPassed = 0;
 
 const HAND = [];
 const DISCARD_PILE = [];
