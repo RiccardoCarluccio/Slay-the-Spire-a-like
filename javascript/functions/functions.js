@@ -197,23 +197,22 @@ function endTurn() {
     drawHandSizeCards();
     displayCards();
   }
+  
+  enemyTurn();
   APERTURA_CHAR.turnBlock = 0;
   damageCounter = 0;
   turnDamage = 0;
   comboCounter = 0;
   rightSyncro = false;
   APERTURA_CHAR.energy = PLAYER_CHARACTERS[0].energy;
-
   turnsPassed++;
   resetCounters();  
-  displayEnergy();
+  displayEnergy();  
 
-  enemyTurn();
-
-  console.log("______________________________");
-  console.log("DISCARD_PILE: ", DISCARD_PILE);
-  console.log("HAND: ", HAND);
-  console.log("APERTURA_DECK: ", APERTURA_DECK);
+  // console.log("______________________________");
+  // console.log("DISCARD_PILE: ", DISCARD_PILE);
+  // console.log("HAND: ", HAND);
+  // console.log("APERTURA_DECK: ", APERTURA_DECK);
 }
 
 /* FUNZIONI DI DRAG AND DROP */
@@ -283,8 +282,6 @@ function playCard(handIndex) {
     turnDamage += damageCounter;
     SPAWNED_ENEMY.HP -= calculateDamage(PLAYED_CARD);
     APERTURA_CHAR.turnBlock += calculateBlock(PLAYED_CARD);
-
-  } else {
 
   }
     

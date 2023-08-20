@@ -8,5 +8,6 @@ const ENEMY_CHARACTERS = [
     STR: 5,
     MAG: 5,
     DEF: 5,
+    turnBlock: 0,
   }
 ]

@@ -1,8 +1,33 @@
 "use strict"
 
+function calculateEnemyDamage(card) {
+  const PLAYED_CARD_DAMAGE = card.baseDamage;
+  return PLAYED_CARD_DAMAGE;
+}
+
+function calculateEnemyBlock(card) {
+  const PLAYED_CARD_BLOCK = card.baseBlock;
+  return PLAYED_CARD_BLOCK;
+}
+
 function enemyTurn() {
   for(let i=0; i<SPAWNED_ENEMY.actions; i++) {
-    const RANDOM_ACTION = Math.floor(Math.random() * SPAWNED_ENEMY_DECK.length + 1);
-    
+    const RANDOM_INDEX = Math.floor(Math.random() * SPAWNED_ENEMY_DECK.length);
+    const ENEMY_ACTION = SPAWNED_ENEMY_DECK[RANDOM_INDEX];
+    ENEMY_ACTION.cardFunction();
+
+    if(SPAWNED_ENEMY_DECK[RANDOM_INDEX].cardType === "attack") {
+      APERTURA_CHAR.HP -= (APERTURA_CHAR.turnBlock - calculateEnemyDamage(ENEMY_ACTION));
+    } else if(SPAWNED_ENEMY_DECK[RANDOM_INDEX].cardType === "block") {
+      SPAWNED_ENEMY.turnBlock += calculateEnemyBlock(ENEMY_ACTION);
+    }
   }
+}
+
+function dummyBasicAttack() {
+  console.log("genshin");
+}
+
+function dummyBasicBlock() {
+  console.log("fortnite");
 }
