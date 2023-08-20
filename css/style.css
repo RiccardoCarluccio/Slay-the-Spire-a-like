@@ -143,13 +143,6 @@ body {
 }
 
 /* FIGHT CONTAINER */
-/* PLAYER ZONE */
-/* #player-zone {
-  height: 100%;
-  width: 450px;
-  display: flex;
-} */
-
 #block-history {
   height: 100%;
   width: 135px;
@@ -324,6 +317,19 @@ body {
   justify-content: center;
   align-items: center;
   padding: 5px;
+  position: relative;
+}
+
+.card-energy {
+  height: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 5px 0 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-name {

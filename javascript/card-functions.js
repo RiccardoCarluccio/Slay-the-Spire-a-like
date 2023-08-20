@@ -2,13 +2,11 @@
 
 function calculateDamage(card) {
   const PLAYED_CARD_DAMAGE = card.baseDamage + card.ADscaling * APERTURA_CHAR.STR + card.APscaling * APERTURA_CHAR.MAG + comboCounter;
-  console.log("CARD DAMAGE: ", PLAYED_CARD_DAMAGE);
   return PLAYED_CARD_DAMAGE;
 }
 
 function calculateBlock(card) {
   const PLAYED_CARD_BLOCK = card.baseBlock + card.DEFscaling * APERTURA_CHAR.DEF + card.DEXscaling * APERTURA_CHAR.DEX;
-  console.log("CARD BLOCK: ", PLAYED_CARD_BLOCK);
   return PLAYED_CARD_BLOCK;
 }
 

@@ -36,6 +36,14 @@ function drawHandSizeCards() {
   }
 }
 
+// let salva = "salva";
+// let salvaClown = 5;
+// function union (a) {
+//   return a + "Clown";
+// }
+// union(salva);
+// ${union(salva)} <br>
+// + ${HAND[i].cardName}${Counter}
 function displayCards() {
   const CARD_IN_HAND = document.getElementById("hand");
   CARD_IN_HAND.innerHTML = "";
@@ -43,6 +51,7 @@ function displayCards() {
     if(HAND[i].cardType === "attack") {
       CARD_IN_HAND.innerHTML += `
         <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
+          <div class="card-energy attack-energy">${HAND[i].energyCost}</div>
           <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
           <div class="card-img"></div>
           <div class="card-description ${HAND[i].cardType}">Damage: ${calculateDamage(HAND[i])} <br> ${HAND[i].description}</div>
@@ -51,6 +60,7 @@ function displayCards() {
     } else if (HAND[i].cardType === "block") {
       CARD_IN_HAND.innerHTML += `
         <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
+        <div class="card-energy block-energy">${HAND[i].energyCost}</div>
           <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
           <div class="card-img"></div>
           <div class="card-description ${HAND[i].cardType}">Block: ${calculateBlock(HAND[i])} <br> ${HAND[i].description}</div>

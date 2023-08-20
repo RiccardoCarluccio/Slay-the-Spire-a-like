@@ -15,3 +15,11 @@
 .card-description.block {
   background-color: oklch(69.26% 0.133 128.65);
 }
+
+.attack-energy {
+  background-color: color-mix(in oklch, #c5303a, #e2d138);
+}
+
+.block-energy {
+  background-color: color-mix(in oklch, #7fb12e, #e2d138 80%);
+}
