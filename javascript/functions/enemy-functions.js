@@ -17,7 +17,10 @@ function enemyTurn() {
     ENEMY_ACTION.cardFunction();
 
     if(SPAWNED_ENEMY_DECK[RANDOM_INDEX].cardType === "attack") {
-      APERTURA_CHAR.HP -= (APERTURA_CHAR.turnBlock - calculateEnemyDamage(ENEMY_ACTION));
+      const ENEMY_DAMAGE = (APERTURA_CHAR.turnBlock - calculateEnemyDamage(ENEMY_ACTION));
+      if(ENEMY_DAMAGE < 0) {
+        APERTURA_CHAR.HP += ENEMY_DAMAGE;
+      }
     } else if(SPAWNED_ENEMY_DECK[RANDOM_INDEX].cardType === "block") {
       SPAWNED_ENEMY.turnBlock += calculateEnemyBlock(ENEMY_ACTION);
     }

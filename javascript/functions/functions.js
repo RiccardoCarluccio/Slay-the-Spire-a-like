@@ -196,7 +196,7 @@ function displayPlayerHp() {
   PLAYER_HP_BAR.innerHTML = "";
   for(let i=0; i<APERTURA_CHAR.HP; i++) {
     PLAYER_HP_BAR.innerHTML += `
-      <div class="hp-segment" style="width:calc(100% / ${APERTURA_CHAR.HP})"></div>
+      <div class="hp-segment" style="width:calc(100% / ${PLAYER_CHARACTERS[0].HP})"></div>
     `
   }
 }
