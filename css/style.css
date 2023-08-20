@@ -233,16 +233,24 @@ body {
   position: relative;
 }
 
+#enemy-pg-actions {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translate(0, -50%);
+}
+
+#enemy-actions {
+  min-height: 50px;
+  min-width: 315px;
+}
+
 .xerath-placeholder {
   width: 315px;
   aspect-ratio: 4/3;
   background-image: url("../imgs/xerath.png");
   background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  transform: translate(0, -50%);
+  background-repeat: no-repeat;  
 }
 
 /* ENEMY BARS */

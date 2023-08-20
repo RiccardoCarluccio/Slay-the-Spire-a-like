@@ -208,6 +208,8 @@ function endTurn() {
   resetCounters();  
   displayEnergy();
 
+  enemyTurn();
+
   console.log("______________________________");
   console.log("DISCARD_PILE: ", DISCARD_PILE);
   console.log("HAND: ", HAND);
