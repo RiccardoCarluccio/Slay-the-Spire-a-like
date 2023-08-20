@@ -3,7 +3,7 @@
 function displayStats() {
   //document.getElementById("energy-meter").innerHTML = "ENERGY = " + APERTURA_CHAR.energy;
   displayEnergy();
-  document.getElementById("enemy-stats-container").innerHTML = "ENEMY HP = " + SPAWNED_ENEMY.HP;
+  document.getElementById("placeholder-hp").innerHTML = "ENEMY HP = " + SPAWNED_ENEMY.HP;
   document.getElementById("ended-caption").innerHTML = "TURNS PASSED";
   document.getElementById("stance-caption").innerHTML = "STANCE";
   document.getElementById("stance-value").innerHTML = APERTURA_CHAR.stance.toUpperCase();
@@ -169,6 +169,17 @@ function refillDeck() {
   DISCARD_PILE.splice(0, DISCARD_PILE.length);
 }
 
+function displayEnemyHp() {
+  const ENEMY_HEALTH_BAR = document.getElementById("enemy-health-bar");
+  debugger
+  ENEMY_HEALTH_BAR.innerHTML = "";
+  for(let i=0; i<SPAWNED_ENEMY.HP; i++) {
+    ENEMY_HEALTH_BAR.innerHTML += `
+      <div class="enemy-hp-segment" style="height:calc(100% / ${ENEMY_CHARACTERS[0].HP})"></div>
+    `
+  }
+}
+
 function endTurn() {
   discardCardsInHand();
   if (APERTURA_DECK.length < handSize) {
@@ -245,4 +256,36 @@ function drop(ev) {
   console.log("APERTURA_DECK: ", APERTURA_DECK);
 }
 /* FINE FUNZIONI DI DRAG AND DROP */
+
+function playCard(handIndex) {
+  const PLAYED_CARD = HAND[handIndex];
+  // const prefix = PLAYED_CARD.cardName;
+  // function dynamicFunction(prefix) {
+  //   return prefix.toLowerCase() + "Card()";
+  // }
+  // dynamicFunction(prefix);
+  // console.log(dynamicFunction);
+  PLAYED_CARD.cardFunction();
+  
+  if (PLAYED_CARD.cardType === "attack") {
+    damageCounter = calculateDamage(PLAYED_CARD);
+    turnDamage += damageCounter;
+    SPAWNED_ENEMY.HP -= calculateDamage(PLAYED_CARD);
+
+  } else if (PLAYED_CARD.cardType === "block") {
+    damageCounter = 0;
+    APERTURA_CHAR.turnBlock += calculateBlock(PLAYED_CARD);
+
+  } else if (PLAYED_CARD.cardType === "attack and block") {
+    damageCounter = calculateDamage(PLAYED_CARD);
+    turnDamage += damageCounter;
+    SPAWNED_ENEMY.HP -= calculateDamage(PLAYED_CARD);
+    APERTURA_CHAR.turnBlock += calculateBlock(PLAYED_CARD);
+
+  } else {
+
+  }
+    
+  displayEnemyHp();
+}
 

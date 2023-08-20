@@ -15,41 +15,6 @@ function energyCost(handIndex) {
   return SELECTED_CARD.energyCost;
 }
 
-function playCard(handIndex) {
-  const PLAYED_CARD = HAND[handIndex];
-  // const prefix = PLAYED_CARD.cardName;
-  // function dynamicFunction(prefix) {
-  //   return prefix.toLowerCase() + "Card()";
-  // }
-  // dynamicFunction(prefix);
-  // console.log(dynamicFunction);
-  PLAYED_CARD.cardFunction();
-  
-  if (PLAYED_CARD.cardType === "attack") {
-    damageCounter = calculateDamage(PLAYED_CARD);
-    turnDamage += damageCounter;
-    SPAWNED_ENEMY.HP -= calculateDamage(PLAYED_CARD);
-
-  } else if (PLAYED_CARD.cardType === "block") {
-    damageCounter = 0;
-    APERTURA_CHAR.turnBlock += calculateBlock(PLAYED_CARD);
-
-  } else if (PLAYED_CARD.cardType === "attack and block") {
-    damageCounter = calculateDamage(PLAYED_CARD);
-    turnDamage += damageCounter;
-    SPAWNED_ENEMY.HP -= calculateDamage(PLAYED_CARD);
-    APERTURA_CHAR.turnBlock += calculateBlock(PLAYED_CARD);
-
-  } else {
-
-  }
-    
-  console.log("DUMMY HP: ", SPAWNED_ENEMY.HP);
-  console.log("APERTURA BLOCK: ", APERTURA_CHAR.turnBlock);
-  //console.log("STANCE: ", APERTURA_CHAR.stance);
-  //console.log("COMBO: ", comboCounter);
-}
-
 /* APERTURA CARDS */
 function jabCard() {
   if(APERTURA_CHAR.stance === "right") {

@@ -24,6 +24,7 @@ console.log("DUMMY: ", SPAWNED_ENEMY);
 displayCards();
 displayStats();
 negativeEnergy();
+displayEnemyHp();
 
 document.getElementById("end-turn").addEventListener('click', endTurn);
 document.getElementById("ultimate-button").addEventListener('click', ultimateButton);
