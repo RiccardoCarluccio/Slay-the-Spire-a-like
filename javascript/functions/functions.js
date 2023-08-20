@@ -12,6 +12,7 @@ function displayStats() {
   document.getElementById("damage-caption").innerHTML = "ACTION DAMAGE";
   document.getElementById("turn-caption").innerHTML = "TURN DAMAGE";
   document.getElementById("ultimate-button").innerHTML = ultimateCharge;
+  document.getElementById("player-zone").innerHTML = APERTURA_CHAR.HP;
   resetCounters();
 }
 
@@ -21,6 +22,15 @@ function resetCounters() {
   document.getElementById("damage-value").innerHTML = damageCounter;
   document.getElementById("turn-value").innerHTML = turnDamage;
   document.getElementById("block-counter").innerHTML = APERTURA_CHAR.turnBlock;
+}
+
+function resetStats() {
+  APERTURA_CHAR.turnBlock = 0;
+  damageCounter = 0;
+  turnDamage = 0;
+  comboCounter = 0;
+  rightSyncro = false;
+  APERTURA_CHAR.energy = PLAYER_CHARACTERS[0].energy;
 }
 
 function drawOneCard() {
@@ -283,15 +293,11 @@ function endTurn() {
   }
   
   enemyTurn();
-  APERTURA_CHAR.turnBlock = 0;
-  damageCounter = 0;
-  turnDamage = 0;
-  comboCounter = 0;
-  rightSyncro = false;
-  APERTURA_CHAR.energy = PLAYER_CHARACTERS[0].energy;
-  turnsPassed++;
+  resetStats();
   resetCounters();  
   displayEnergy();
+  turnsPassed++;
+  displayStats();
 
   // console.log("______________________________");
   // console.log("DISCARD_PILE: ", DISCARD_PILE);
