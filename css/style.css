@@ -189,13 +189,30 @@ body {
 }
 
 #player-zone {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#player-placeholder {
+  display: flex;
+  flex-direction: column;
+}
+
+#player-hp {
+  text-align: center;
+}
+
+#player-character {
   background-image: url("../imgs/xerath.png");
-  background-size: 315px;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   transform: scaleX(-1);
-  height: 100%;
-  width: 350px;
+  width: 315px;
+  aspect-ratio: 4/3;
 }
 
 /* ENEMY ZONE */

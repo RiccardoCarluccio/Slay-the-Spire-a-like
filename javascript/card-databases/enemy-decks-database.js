@@ -5,13 +5,13 @@ const DUMMY_DECK = [
     cardName: "Basic Attack",
     cardFunction: dummyBasicAttack,
     cardType: "attack",
-    baseDamage: 10,
+    baseDamage: 9,
   },
   {
     cardName: "Basic Block",
     cardFunction: dummyBasicBlock,
     cardType: "block",
-    baseBlock: 10,
+    baseBlock: 9,
   },
 ]
 

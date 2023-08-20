@@ -12,7 +12,7 @@ function displayStats() {
   document.getElementById("damage-caption").innerHTML = "ACTION DAMAGE";
   document.getElementById("turn-caption").innerHTML = "TURN DAMAGE";
   document.getElementById("ultimate-button").innerHTML = ultimateCharge;
-  document.getElementById("player-zone").innerHTML = APERTURA_CHAR.HP;
+  document.getElementById("player-hp").innerHTML = APERTURA_CHAR.HP;
   resetCounters();
 }
 
