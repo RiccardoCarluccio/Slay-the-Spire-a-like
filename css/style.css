@@ -105,9 +105,17 @@ body {
   background-color: oklch(64.4% 0.21 27);
 }
 
-#last-chance,
 #hp-meter {
+  display: flex;
+}
+
+#last-chance,
+.hp-segment {
   background-color: oklch(53.97% 0.133 128.65);
+}
+
+.hp-segment {
+  height: 100%;
 }
 
 #chance-nrg-hp-container,

@@ -3,6 +3,7 @@
 function displayStats() {
   //document.getElementById("energy-meter").innerHTML = "ENERGY = " + APERTURA_CHAR.energy;
   displayEnergy();
+  displayPlayerHp();
   document.getElementById("placeholder-hp").innerHTML = "ENEMY HP = " + SPAWNED_ENEMY.HP;
   document.getElementById("ended-caption").innerHTML = "TURNS PASSED";
   document.getElementById("stance-caption").innerHTML = "STANCE";
@@ -180,39 +181,14 @@ function displayEnemyHp() {
   }
 }
 
-function endTurn() {
-  discardCardsInHand();
-  if (APERTURA_DECK.length < handSize) {
-    for(let i=0; i<APERTURA_DECK.length; i++) {
-      drawOneCard();
-    }
-    refillDeck();
-    const HAND_DIFFERENCE = handSize - HAND.length;
-    for(let i=0; i<HAND_DIFFERENCE; i++) {
-      drawOneCard();
-    }
-    displayCards();
-  } else {
-    discardCardsInHand();
-    drawHandSizeCards();
-    displayCards();
+function displayPlayerHp() {
+  const PLAYER_HP_BAR = document.getElementById("hp-meter");
+  PLAYER_HP_BAR.innerHTML = "";
+  for(let i=0; i<APERTURA_CHAR.HP; i++) {
+    PLAYER_HP_BAR.innerHTML += `
+      <div class="hp-segment" style="width:calc(100% / ${APERTURA_CHAR.HP})"></div>
+    `
   }
-  
-  enemyTurn();
-  APERTURA_CHAR.turnBlock = 0;
-  damageCounter = 0;
-  turnDamage = 0;
-  comboCounter = 0;
-  rightSyncro = false;
-  APERTURA_CHAR.energy = PLAYER_CHARACTERS[0].energy;
-  turnsPassed++;
-  resetCounters();  
-  displayEnergy();  
-
-  // console.log("______________________________");
-  // console.log("DISCARD_PILE: ", DISCARD_PILE);
-  // console.log("HAND: ", HAND);
-  // console.log("APERTURA_DECK: ", APERTURA_DECK);
 }
 
 /* FUNZIONI DI DRAG AND DROP */
@@ -288,3 +264,37 @@ function playCard(handIndex) {
   displayEnemyHp();
 }
 
+function endTurn() {
+  discardCardsInHand();
+  if (APERTURA_DECK.length < handSize) {
+    for(let i=0; i<APERTURA_DECK.length; i++) {
+      drawOneCard();
+    }
+    refillDeck();
+    const HAND_DIFFERENCE = handSize - HAND.length;
+    for(let i=0; i<HAND_DIFFERENCE; i++) {
+      drawOneCard();
+    }
+    displayCards();
+  } else {
+    discardCardsInHand();
+    drawHandSizeCards();
+    displayCards();
+  }
+  
+  enemyTurn();
+  APERTURA_CHAR.turnBlock = 0;
+  damageCounter = 0;
+  turnDamage = 0;
+  comboCounter = 0;
+  rightSyncro = false;
+  APERTURA_CHAR.energy = PLAYER_CHARACTERS[0].energy;
+  turnsPassed++;
+  resetCounters();  
+  displayEnergy();
+
+  // console.log("______________________________");
+  // console.log("DISCARD_PILE: ", DISCARD_PILE);
+  // console.log("HAND: ", HAND);
+  // console.log("APERTURA_DECK: ", APERTURA_DECK);
+}
