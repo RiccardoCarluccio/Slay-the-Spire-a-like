@@ -27,3 +27,11 @@
 .block-energy {
   background-color: color-mix(in oklch, #7fb12e, #e2d138 80%);
 }
+
+.border-stance {
+  outline: 2px dashed oklch(55.59% 0.101 73.06);
+}
+
+.border-syncro {
+  outline: 2px dotted oklch(66.76% 0.128 94.24);
+}
