@@ -75,7 +75,9 @@ function displayCards() {
 
 function displayOutline(ev) {
   const OUTLINED_CARD = document.getElementById(`card-in-hand-${HAND[ev].indexCardCounter}`);
-  if((HAND[ev].attackType === "left attack" && APERTURA_CHAR.stance === "right") || (HAND[ev].attackType === "right attack" && APERTURA_CHAR.stance === "left")) {
+  if(HAND[ev].rightSyncroTrue && rightSyncro) {
+    OUTLINED_CARD.classList.add("border-syncro");
+  } else if((HAND[ev].attackType === "left attack" && APERTURA_CHAR.stance === "right") || (HAND[ev].attackType === "right attack" && APERTURA_CHAR.stance === "left")) {
     OUTLINED_CARD.classList.add("border-stance");
   }
 }

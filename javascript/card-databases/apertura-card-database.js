@@ -36,6 +36,7 @@ const aperturaCardDatabase = [
     ADscaling: 0.7,
     APscaling: 0.2,
     description: ["Stance > Right"],
+    rightSyncroTrue: true,
   },
   {
     cardName: "Right Shoulder Duck",
