@@ -24,6 +24,6 @@
 }
 
 .card-in-hand:hover {
-  transform: translate(0, -25px) scale(1.5);
+  transform: translate(0, -45px) scale(1.8);
   z-index: 100;
 }

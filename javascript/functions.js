@@ -77,7 +77,7 @@ function displayOutline(ev) {
   const OUTLINED_CARD = document.getElementById(`card-in-hand-${HAND[ev].indexCardCounter}`);
   if(HAND[ev].rightSyncroTrue && rightSyncro) {
     OUTLINED_CARD.classList.add("border-syncro");
-  } else if((HAND[ev].attackType === "left attack" && APERTURA_CHAR.stance === "right") || (HAND[ev].attackType === "right attack" && APERTURA_CHAR.stance === "left")) {
+  } else if((HAND[ev].stanceCombo === "right" && APERTURA_CHAR.stance === "right") || (HAND[ev].stanceCombo === "left" && APERTURA_CHAR.stance === "left")) {
     OUTLINED_CARD.classList.add("border-stance");
   }
 }
@@ -143,6 +143,7 @@ function ultimate() {
   turnDamage += damageCounter;
   SPAWNED_ENEMY.HP -= ultDamage();
   displayStats();
+  displayEnemyHp();
 }
 
 function ultDamage() {
@@ -171,7 +172,6 @@ function refillDeck() {
 
 function displayEnemyHp() {
   const ENEMY_HEALTH_BAR = document.getElementById("enemy-health-bar");
-  debugger
   ENEMY_HEALTH_BAR.innerHTML = "";
   for(let i=0; i<SPAWNED_ENEMY.HP; i++) {
     ENEMY_HEALTH_BAR.innerHTML += `
