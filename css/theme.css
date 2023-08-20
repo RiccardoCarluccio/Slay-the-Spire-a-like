@@ -29,9 +29,9 @@
 }
 
 .border-stance {
-  outline: 2px dashed oklch(55.59% 0.101 73.06);
+  outline: 3px solid oklch(45% 0.239 279.53);
 }
 
 .border-syncro {
-  outline: 3px dotted oklch(55.59% 0.257 304.94);
+  outline: 3px solid oklch(45% 0.064 178.94);
 }
