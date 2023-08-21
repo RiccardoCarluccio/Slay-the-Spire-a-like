@@ -285,11 +285,11 @@ body {
 }
 
 #enemy-attack {
-  background-color: oklch(71.62% 0.094 201.71);
+  background-color: oklch(63.82% 0.143 51.88);
 }
 
 #enemy-block {
-  background-color: oklch(63.82% 0.143 51.88);
+  background-color: oklch(71.62% 0.094 201.71);
 }
 
 .xerath-placeholder {
