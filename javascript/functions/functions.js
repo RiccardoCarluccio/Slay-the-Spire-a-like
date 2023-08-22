@@ -123,6 +123,11 @@ function displayEnergy() {
   }
 }
 
+function energyCost(handIndex) {
+  const SELECTED_CARD = HAND[handIndex];
+  return SELECTED_CARD.energyCost;
+}
+
 function displayUlt(tick) {
   const ULT_METER = document.getElementById("ult-meter");
   const ULT_PROGRESS = document.getElementById("ultimate-button");
@@ -276,7 +281,6 @@ function playCard(handIndex) {
     turnDamage += damageCounter;
     SPAWNED_ENEMY.HP -= calculateDamage(PLAYED_CARD);
     APERTURA_CHAR.turnBlock += calculateBlock(PLAYED_CARD);
-
   }
     
   displayEnemyHp();

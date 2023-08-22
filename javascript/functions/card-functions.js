@@ -10,11 +10,6 @@ function calculateBlock(card) {
   return PLAYED_CARD_BLOCK;
 }
 
-function energyCost(handIndex) {
-  const SELECTED_CARD = HAND[handIndex];
-  return SELECTED_CARD.energyCost;
-}
-
 /* APERTURA CARDS */
 function jabCard() {
   if(APERTURA_CHAR.stance === "right") {
