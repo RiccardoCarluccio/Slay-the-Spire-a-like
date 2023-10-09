@@ -289,7 +289,16 @@ body {
 }
 
 #enemy-block {
+  background-color: oklch(70% 0.15 122.82);
+}
+
+#enemy-current-block {
+  height: 80px;
+  width: 80px;
   background-color: oklch(71.62% 0.094 201.71);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .xerath-placeholder {

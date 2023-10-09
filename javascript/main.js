@@ -34,5 +34,3 @@ displayStats();
 
 document.getElementById("end-turn").addEventListener('click', endTurn);
 document.getElementById("ultimate-button").addEventListener('click', ultimateButton);
-
-//come implementare Vue.js in un progetto a più file .js?

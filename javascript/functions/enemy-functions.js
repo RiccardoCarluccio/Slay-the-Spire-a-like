@@ -26,11 +26,12 @@ function displayEnemyActions() {
 }
 
 function enemyTurn() {
-      const ENEMY_DAMAGE = (APERTURA_CHAR.turnBlock - enemyOffense);
-      if(ENEMY_DAMAGE < 0) {
-        APERTURA_CHAR.HP += ENEMY_DAMAGE;
-      }
-      SPAWNED_ENEMY.turnBlock += enemyDefense;
+  const ENEMY_DAMAGE = (APERTURA_CHAR.turnBlock - enemyOffense);
+  if(ENEMY_DAMAGE < 0) {
+    APERTURA_CHAR.HP += ENEMY_DAMAGE;
+  }
+  SPAWNED_ENEMY.turnBlock = 0;
+  SPAWNED_ENEMY.turnBlock += enemyDefense;
   // for(let i=0; i<ENEMY_FUNCTIONS.length; i++) {
     
   // }

@@ -18,6 +18,7 @@ function displayStats() {
   document.getElementById("enemy-attack-value").innerHTML = enemyOffense;
   document.getElementById("enemy-block-caption").innerHTML = "BLOCK";
   document.getElementById("enemy-block-value").innerHTML = enemyDefense;
+  document.getElementById("enemy-current-block").innerHTML = SPAWNED_ENEMY.turnBlock;
 
   resetCounters();
 }
@@ -270,7 +271,7 @@ function playCard(handIndex) {
   if (PLAYED_CARD.cardType === "attack") {
     damageCounter = calculateDamage(PLAYED_CARD);
     turnDamage += damageCounter;
-    SPAWNED_ENEMY.HP -= calculateDamage(PLAYED_CARD);
+    calculateDamageAfterBlock(damageCounter);
 
   } else if (PLAYED_CARD.cardType === "block") {
     damageCounter = 0;
@@ -279,7 +280,7 @@ function playCard(handIndex) {
   } else if (PLAYED_CARD.cardType === "attack and block") {
     damageCounter = calculateDamage(PLAYED_CARD);
     turnDamage += damageCounter;
-    SPAWNED_ENEMY.HP -= calculateDamage(PLAYED_CARD);
+    calculateDamageAfterBlock(damageCounter);
     APERTURA_CHAR.turnBlock += calculateBlock(PLAYED_CARD);
   }
     
