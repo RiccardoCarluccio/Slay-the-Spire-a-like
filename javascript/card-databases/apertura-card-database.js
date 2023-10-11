@@ -33,6 +33,7 @@ const aperturaCardDatabase = [
     cardType: "attack",
     attackType: "right attack",
     stance: "right",
+    stanceDamageBonus: 2,
     stanceCombo: "left",
     baseDamage: 1,
     ADscaling: 0.7,

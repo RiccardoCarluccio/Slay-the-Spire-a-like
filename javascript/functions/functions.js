@@ -71,14 +71,25 @@ function displayCards() {
   CARD_IN_HAND.innerHTML = "";
   for(let i=0; i<HAND.length; i++) {
     if(HAND[i].cardType === "attack") {
-      CARD_IN_HAND.innerHTML += `
-        <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
-          <div class="card-energy attack-energy">${HAND[i].energyCost}</div>
-          <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
-          <div class="card-img"></div>
-          <div class="card-description ${HAND[i].cardType}">Damage: ${calculateDamage(HAND[i])} <br> ${HAND[i].description}</div>
-        </div>
-      `;
+      if(HAND[i].cardType === "attack" && HAND[i].stanceCombo === APERTURA_CHAR.stance) {
+        CARD_IN_HAND.innerHTML += `
+          <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
+            <div class="card-energy attack-energy">${HAND[i].energyCost}</div>
+            <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
+            <div class="card-img"></div>
+            <div class="card-description ${HAND[i].cardType}">Damage: ${(calculateDamage(HAND[i]) + HAND[i].stanceDamageBonus)} <br> ${HAND[i].description}</div>
+          </div>
+        `;
+      } else {
+        CARD_IN_HAND.innerHTML += `
+          <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
+            <div class="card-energy attack-energy">${HAND[i].energyCost}</div>
+            <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
+            <div class="card-img"></div>
+            <div class="card-description ${HAND[i].cardType}">Damage: ${calculateDamage(HAND[i])} <br> ${HAND[i].description}</div>
+          </div>
+        `;
+      }
     } else if (HAND[i].cardType === "block") {
       CARD_IN_HAND.innerHTML += `
         <div id="card-in-hand-${HAND[i].indexCardCounter}" class="card card-in-hand ${HAND[i].cardType}" data-card-index="${HAND[i].indexCardCounter}" draggable="true" ondragstart="drag(event)">
