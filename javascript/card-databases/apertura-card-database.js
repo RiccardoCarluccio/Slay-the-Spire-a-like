@@ -8,6 +8,7 @@ const aperturaCardDatabase = [
     cardType: "attack",
     attackType: "left attack",
     stance: "left",
+    stanceDamageBonus: 1,
     stanceCombo: "right",
     baseDamage: 1,
     ADscaling: 0.5,
@@ -40,6 +41,7 @@ const aperturaCardDatabase = [
     APscaling: 0.2,
     description: ["Stance > Right"],
     rightSyncroTrue: true,
+    rightSyncroDamage: 4,
   },
   {
     cardName: "Right Shoulder Duck",
