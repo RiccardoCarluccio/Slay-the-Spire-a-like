@@ -14,6 +14,7 @@ function calculateDamageAfterBlock(damage) {
   const FINAL_DAMAGE = (SPAWNED_ENEMY.turnBlock - damage)
   SPAWNED_ENEMY.turnBlock -= damage;
   if(FINAL_DAMAGE < 0) {
+    SPAWNED_ENEMY.turnBlock = 0;
     SPAWNED_ENEMY.HP += FINAL_DAMAGE;
   }
 }
