@@ -431,6 +431,41 @@ body {
   width: 100%;
   height: 40%;
   border-radius: 0 0 5px 5px;
+  padding: 5px;
+}
+
+.card-numbers-display {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-icon {
+  height: 15px;
+  aspect-ratio: 1/1;
+  background-size: contain;
+}
+
+.attack-icon {
+  background-image: url('../imgs/Sword\ Icon.png');
+}
+
+.block-icon {
+  background-image: url('../imgs/Shield\ Icon.png');
+}
+
+.stance-icon {
+  background-image: url('../imgs/Stance\ Icon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.caret-icon {
+  background-image: url('../imgs/Caret\ Right.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 /* CARDS - DRAW PILE */

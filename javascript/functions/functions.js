@@ -76,7 +76,16 @@ function displayCards() {
           <div class="card-energy attack-energy">${HAND[i].energyCost}</div>
           <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
           <div class="card-img"></div>
-          <div class="card-description ${HAND[i].cardType}">Damage: ${(calculateDamage(HAND[i]) + checkCombo(HAND[i]))} <br> ${HAND[i].description}</div>
+          <div class="card-description ${HAND[i].cardType}">
+            <div class="card-numbers-display">
+              <div class="card-icon attack-icon"></div> ${(calculateDamage(HAND[i]) + checkCombo(HAND[i]))}
+            </div> 
+            <div class="card-numbers-display">
+              <div class="card-icon stance-icon"></div>
+              <div class="card-icon caret-icon"></div>
+              ${HAND[i].stanceDescription}
+            </div>
+          </div>
         </div>
       `;
     } else if (HAND[i].cardType === "block") {
@@ -85,7 +94,17 @@ function displayCards() {
         <div class="card-energy block-energy">${HAND[i].energyCost}</div>
           <div class="card-name ${HAND[i].cardType}">${HAND[i].cardName}</div>
           <div class="card-img"></div>
-          <div class="card-description ${HAND[i].cardType}">Block: ${calculateBlock(HAND[i])} <br> ${HAND[i].description}</div>
+          <div class="card-description ${HAND[i].cardType}">
+            <div class="card-numbers-display">
+              <div class="card-icon block-icon"></div>
+              ${calculateBlock(HAND[i])}
+            </div>
+            <div class="card-numbers-display">
+              <div class="card-icon stance-icon"></div>
+              <div class="card-icon caret-icon"></div>
+              ${HAND[i].stanceDescription}
+            </div>
+          </div>
         </div>
       `;
     }
