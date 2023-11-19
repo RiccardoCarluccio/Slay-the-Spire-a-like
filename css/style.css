@@ -56,6 +56,8 @@ body {
   top: 0;
   left: 0;
   z-index: 2000;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 #close-discard-pile {
@@ -66,4 +68,10 @@ body {
   position: absolute;
   left: 42px;
   bottom: 210px;
+}
+
+#opened-discard-pile-content {
+  width: 70%;
+  height: calc(100vh - 135px);
+  background-color: rgba(174, 187, 118, 0.5);
 }
