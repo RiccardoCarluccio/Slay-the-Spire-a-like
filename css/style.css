@@ -44,3 +44,17 @@ body {
 .enemy-hp-segment {
   background-color: oklch(41.47% 0.155 25.41);
 }
+
+/* OPENED DISCARD PILE */
+.opened-discard-pile {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2000;
+}
+
+.opened-discard-pile-content {
+  
+}
