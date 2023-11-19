@@ -46,21 +46,24 @@ body {
   background-color: oklch(41.47% 0.155 25.41);
 }
 
-/* OFFCANVA - OPENED DISCARD PILE */
-.opened-discard-pile {
+/* DISCARD PILE OFFCANVA */
+#opened-discard-pile {
   display: none;
   background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2000;
 }
 
-/* .opened-discard-pile-content {
-  animation-name: openDiscardPile;
-  animation-duration: 0.25s;
-  width: 80%;
-  height: 80%;
-} */
+#close-discard-pile {
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-image: url('../imgs/Circle\ Xmark.png');
+  background-size: contain;
+  position: absolute;
+  left: 42px;
+  bottom: 210px;
+}
