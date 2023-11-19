@@ -82,7 +82,6 @@ function displayCards() {
             </div> 
             <div class="card-numbers-display">
               <div class="card-icon stance-icon"></div>
-              <div class="card-icon caret-icon"></div>
               ${HAND[i].stanceDescription}
             </div>
           </div>
@@ -101,7 +100,6 @@ function displayCards() {
             </div>
             <div class="card-numbers-display">
               <div class="card-icon stance-icon"></div>
-              <div class="card-icon caret-icon"></div>
               ${HAND[i].stanceDescription}
             </div>
           </div>

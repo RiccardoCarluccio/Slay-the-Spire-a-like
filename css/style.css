@@ -455,17 +455,7 @@ body {
 }
 
 .stance-icon {
-  background-image: url('../imgs/Stance\ Icon.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.caret-icon {
-  background-image: url('../imgs/Caret\ Right.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-image: url('../imgs/Cycle\ Icon.png');
 }
 
 /* CARDS - DRAW PILE */
