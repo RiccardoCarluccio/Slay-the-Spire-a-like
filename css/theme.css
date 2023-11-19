@@ -3,29 +3,29 @@
 }
 
 .attack {
-  background-color: oklch(54.56% 0.185 22.76);
+  background-color: var(--attack-card-background-color);
 }
 
 .card-name.attack,
 .card-description.attack {
-  background-color: oklch(54.85% 0.136 22.76);
+  background-color: var(--attack-card-description-color);
+}
+
+.attack-energy {
+  background-color: var(--attack-card-energy-color);
 }
 
 .block {
-  background-color: oklch(70% 0.165 128.65);
+  background-color: var(--block-card-background-color);
 }
 
 .card-name.block,
 .card-description.block {
-  background-color: oklch(69.26% 0.133 128.65);
-}
-
-.attack-energy {
-  background-color: color-mix(in oklch, #c5303a, #e2d138);
+  background-color: var(--block-card-description-color);
 }
 
 .block-energy {
-  background-color: color-mix(in oklch, #7fb12e, #e2d138 80%);
+  background-color: var(--block-card-energy-color);
 }
 
 .border-stance {
