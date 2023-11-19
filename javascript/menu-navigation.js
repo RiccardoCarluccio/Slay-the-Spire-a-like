@@ -1,6 +1,6 @@
 "use strict"
 
-const DISCARD_PILE_CONTAINER = document.getElementById("discard-pile");                 //contenitore
+const DISCARD_PILE_CONTAINER = document.getElementById("discard-pile");                   //contenitore
 const DISCARD_PILE_OFFCANVA = document.getElementById("opened-discard-pile");
 //const CLOSE_DISCARD_PILE = document.getElementById("close-discard-pile");               //pulsante
 
