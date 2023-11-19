@@ -35,3 +35,15 @@
 .border-syncro {
   outline: 3px solid oklch(45% 0.064 178.94);
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
