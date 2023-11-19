@@ -1,0 +1,119 @@
+#menu-container {
+  height: 135px;
+  display: flex;
+}
+
+/* IN THE MENU CONTAINER */
+#settings {
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+#meta-menu-btn,
+#game-menu-btn {
+  background-image: url("../../imgs/dragon-solid.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 50px;
+  aspect-ratio: 1/1;
+}
+
+#equip {
+  width: 135px;
+}
+
+#player-bars-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* PLAYER BARS */
+#energy-hp-container {
+  position: relative;
+}
+
+#energy-meter {
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+.energy-segment {
+  background-color: oklch(70% 0.148 72.53);
+}
+
+#negative-meter {
+  display: flex;
+}
+
+.negative-segment {
+  background-color: oklch(64.4% 0.21 27);
+}
+
+#hp-meter {
+  display: flex;
+}
+
+#last-chance,
+.hp-segment {
+  background-color: oklch(53.97% 0.133 128.65);
+}
+
+.hp-segment {
+  height: 100%;
+}
+
+#chance-nrg-hp-container,
+#ult-container {
+  display: flex;
+}
+
+#excess-energy {
+  background-color: oklch(60.74% 0.173 40.76);
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#last-chance {
+  height: 50px;
+  aspect-ratio: 3/5;
+}
+
+#energy-meter,
+#negative-meter,
+#hp-meter,
+#ult-meter {
+  height: 25px;
+  width: 550px;
+}
+
+#ult-meter {
+  background-color: oklch(64.4% 0.057 247.24);
+  height: 25px;
+  width: 610px;
+  display: flex;
+}
+
+.ult-segment {
+  background-color: oklch(46.32% 0.057 201.71);
+}
+
+#ultimate-button {
+  background-color: oklch(41.91% 0.104 251.47);
+  height: 60px;
+  aspect-ratio: 2/3;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,181 @@
+#cards-container {
+  width: 100%;
+  height: 190px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* IN THE CARDS CONTAINER */
+#discard-pile {
+  position: relative;
+  height: 100%;
+  width: 300px;
+}
+
+#hand {
+  width: 1000px;
+  height: 100%;
+  background-color: #e77a7a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#draw-end {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+}
+
+#draw-pile,
+#end-turn-container {
+  width: 50%;
+}
+
+#draw-pile {
+  position: relative;
+}
+
+#end-turn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARDS - DISCARD PILE */
+.card {
+  width: 100px;
+  aspect-ratio: 5/7;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.absolute-card {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+#discard-pile .card:nth-child(1) {
+  background-color: oklch(58.68% 0.22 354.18);
+  transform: translate(-16%) rotate(-10deg);
+}
+
+#discard-pile .card:nth-child(2) {
+  background-color: oklch(53.09% 0.239 264.18);
+  transform: translate(-8%) rotate(-5deg);
+}
+
+#discard-pile .card:nth-child(3) {
+  background-color: oklch(66.62% 0.187 138.18);
+}
+
+#discard-pile .card:nth-child(4) {
+  background-color: oklch(58.09% 0.222 28.06);
+  transform: translate(8%) rotate(5deg);
+}
+
+/* CARDS - HAND */
+.card-in-hand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+}
+
+.card-energy {
+  height: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 5px 0 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-name {
+  width: 100%;
+  height: 20%;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-img {
+  width: 100%;
+  height: 40%;
+}
+
+.card-description {
+  width: 100%;
+  height: 40%;
+  border-radius: 0 0 5px 5px;
+  padding: 5px;
+}
+
+.card-numbers-display {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-icon {
+  height: 15px;
+  aspect-ratio: 1/1;
+  background-size: contain;
+}
+
+.attack-icon {
+  background-image: url('../../imgs/Sword\ Icon.png');
+}
+
+.block-icon {
+  background-image: url('../../imgs/Shield\ Icon.png');
+}
+
+.stance-icon {
+  background-image: url('../../imgs/Cycle\ Icon.png');
+}
+
+/* CARDS - DRAW PILE */
+#draw-pile .card:nth-child(4) {
+  background-image: url("../../imgs/asso_di_bastoni.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: translate(-5%, -5%);
+}
+
+#draw-pile .card:nth-child(3) {
+  transform: translate(-2.5%, -2.5%);
+}
+
+#draw-pile .card:nth-child(1) {
+  transform: translate(2.5%, 2.5%);
+}
+
+#draw-pile .draw-card {
+  background-color: cadetblue;
+}
+
+/* END TURN */
+#end-turn {
+  height: 125px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  white-space: nowrap;
+  letter-spacing: -2px;
+  font-weight: 600;
+  outline: 2px solid black;
+  color: white;
+  background-color: oklch(63.38% 0.202 23.82);
+  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+             1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+}
