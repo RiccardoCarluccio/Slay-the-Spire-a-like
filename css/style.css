@@ -74,4 +74,9 @@ body {
   width: 70%;
   height: calc(100vh - 135px);
   background-color: rgba(174, 187, 118, 0.5);
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
 }
