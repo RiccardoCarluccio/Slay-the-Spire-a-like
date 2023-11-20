@@ -78,8 +78,7 @@
 }
 
 /* CARDS - HAND */
-.card-in-hand,
-.card-in-discard-offcanva {
+.card-in-hand {
   display: flex;
   flex-direction: column;
   justify-content: center;
