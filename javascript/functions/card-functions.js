@@ -61,4 +61,4 @@ function rightShoulderDuck() {
   APERTURA_CHAR.stance = "right";
   rightSyncro = true;
 }
-/* END APERTURA CARDS */
+/* END OF APERTURA CARDS */
