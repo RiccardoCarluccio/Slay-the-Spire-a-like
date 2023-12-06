@@ -73,10 +73,12 @@ body {
 #opened-discard-pile-content {
   width: 70%;
   height: calc(100vh - 135px);
-  background-color: rgba(174, 187, 118, 0.5);
-  padding: 2rem;
+  background-color: rgba(174, 187, 118, 0.7);
+  padding: 4rem 3.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 5rem;
 }
+
+/* DECK OFFCANVA */

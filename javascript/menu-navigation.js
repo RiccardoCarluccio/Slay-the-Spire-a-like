@@ -22,7 +22,7 @@ function displayDiscardedCards() {
   for(let i=0; i<DISCARD_PILE.length; i++) {
     if(DISCARD_PILE[i].cardType === "attack") {
       OPENED_DISCARD_PILE_CONTENT.innerHTML += `
-        <div class="card card-in-discard-offcanva ${DISCARD_PILE[i].cardType}">
+        <div class="card card-in-discard card-in-discard-offcanva ${DISCARD_PILE[i].cardType}">
           <div class="card-energy attack-energy">${DISCARD_PILE[i].energyCost}</div>
           <div class="card-name ${DISCARD_PILE[i].cardType}">${DISCARD_PILE[i].cardName}</div>
           <div class="card-img"></div>
@@ -39,7 +39,7 @@ function displayDiscardedCards() {
       `;
     } else if (DISCARD_PILE[i].cardType === "block") {
       OPENED_DISCARD_PILE_CONTENT.innerHTML += `
-        <div class="card card-in-discard-offcanva ${DISCARD_PILE[i].cardType}">
+        <div class="card card-in-discard card-in-discard-offcanva ${DISCARD_PILE[i].cardType}">
         <div class="card-energy block-energy">${DISCARD_PILE[i].energyCost}</div>
           <div class="card-name ${DISCARD_PILE[i].cardType}">${DISCARD_PILE[i].cardName}</div>
           <div class="card-img"></div>
