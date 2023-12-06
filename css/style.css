@@ -79,6 +79,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5rem;
+  overflow-y: auto;
 }
 
 /* DECK OFFCANVA */
