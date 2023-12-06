@@ -11,6 +11,7 @@ body {
   width: 100dvw;
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
+  position: relative;
 }
 
 /* MAIN CONTAINERS */
@@ -44,3 +45,40 @@ body {
 .enemy-hp-segment {
   background-color: oklch(41.47% 0.155 25.41);
 }
+
+/* DISCARD PILE OFFCANVA */
+#opened-discard-pile {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#close-discard-pile {
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-image: url('../imgs/Circle\ Xmark.png');
+  background-size: contain;
+  position: absolute;
+  left: 42px;
+  bottom: 210px;
+}
+
+#opened-discard-pile-content {
+  width: 70%;
+  height: calc(100vh - 135px);
+  background-color: rgba(174, 187, 118, 0.7);
+  padding: 4rem 3.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+/* DECK OFFCANVA */

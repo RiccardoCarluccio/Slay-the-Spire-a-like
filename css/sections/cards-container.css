@@ -45,11 +45,17 @@
 }
 
 /* CARDS - DISCARD PILE */
+.card-in-discard {
+  scale: 1.5;
+}
+
 .card {
   width: 100px;
   aspect-ratio: 5/7;
   border-radius: 10px;
   text-align: center;
+  padding: 5px;
+  position: relative;
 }
 
 .absolute-card {
@@ -78,15 +84,6 @@
 }
 
 /* CARDS - HAND */
-.card-in-hand {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  position: relative;
-}
-
 .card-energy {
   height: 20px;
   aspect-ratio: 1/1;
