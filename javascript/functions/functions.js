@@ -58,14 +58,6 @@ function drawHandSizeCards() {
   }
 }
 
-// let salva = "salva";
-// let salvaClown = 5;
-// function union (a) {
-//   return a + "Clown";
-// }
-// union(salva);
-// ${union(salva)} <br>
-// + ${HAND[i].cardName}${Counter}
 function displayCards() {
   const CARD_IN_HAND = document.getElementById("hand");
   CARD_IN_HAND.innerHTML = "";
@@ -272,12 +264,6 @@ function drop(ev) {
     displayCards();
   }
 
-  /* CODICE ENERGIA NEGATIVA */
-  // const NEGATIVE_METER = document.getElementById("negative-meter");
-  // NEGATIVE_METER.innerHTML = "";
-  // `${PLAYER_CHARACTERS[0].energy} - ${APERTURA_CHAR.energy}`
-  /* FINE */
-
   console.log("______________________________");
   console.log("DISCARD_PILE: ", DISCARD_PILE);
   console.log("HAND: ", HAND);
@@ -287,12 +273,6 @@ function drop(ev) {
 
 function playCard(handIndex) {
   const PLAYED_CARD = HAND[handIndex];
-  // const prefix = PLAYED_CARD.cardName;
-  // function dynamicFunction(prefix) {
-  //   return prefix.toLowerCase() + "Card()";
-  // }
-  // dynamicFunction(prefix);
-  // console.log(dynamicFunction);
   PLAYED_CARD.cardFunction();
   
   if (PLAYED_CARD.cardType === "attack") {

@@ -11,8 +11,8 @@ const aperturaCardDatabase = [
     stanceDamageBonus: 1,
     stanceCombo: "right",
     baseDamage: 1,
-    ADscaling: 0.5,
-    APscaling: 0.2,
+    PhysicalScaling: 0.5,
+    MagicalScaling: 0.2,
     stanceDescription: ["Left"],
   },
   {
@@ -23,8 +23,8 @@ const aperturaCardDatabase = [
     blockType: "guard",
     stance: "balanced",
     baseBlock: 3,
-    DEFscaling: 1,
-    DEXscaling: 0,
+    DefenseScaling: 1,
+    DexterityScaling: 0,
     stanceDescription: ["Balanced"],
   },
   {
@@ -37,8 +37,8 @@ const aperturaCardDatabase = [
     stanceDamageBonus: 2,
     stanceCombo: "left",
     baseDamage: 1,
-    ADscaling: 0.7,
-    APscaling: 0.2,
+    PhysicalScaling: 0.7,
+    MagicalScaling: 0.2,
     stanceDescription: ["Right"],
     rightSyncroTrue: true,
     rightSyncroDamage: 4,
@@ -52,8 +52,8 @@ const aperturaCardDatabase = [
     stance: "right",
     stanceCombo: "left",
     baseBlock: 0.5,
-    DEFscaling: 0,
-    DEXscaling: 0.5,
+    DefenseScaling: 0,
+    DexterityScaling: 0.5,
     stanceDescription: ["Right"],
   }
 ]
