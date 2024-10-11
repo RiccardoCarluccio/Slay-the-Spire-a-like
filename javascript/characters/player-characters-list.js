@@ -7,7 +7,7 @@
 //defense = block defense
 //constitution = diocane è?
 //resistance = debuffs resistance?
-//turnBlock = ???
+//turnBlock = block accumulated during the turn
 //stance = starting stance
 //energy = starting energy
 
@@ -17,7 +17,7 @@ const PLAYER_CHARACTERS = [
     HP: 100,
     STR: 5,
     DEX: 5,
-    MAG: 5,   //lower MAG on starting stats and equip -> higher card scaling?
+    MAG: 5,   //lower MAG on starting stats and equip -> higher card scaling for Apertura?
     DEF: 5,
     CON: 5,
     RES: 5,

@@ -37,6 +37,7 @@ function rightShoulderDuck() {
     if(APERTURA_CHAR.stance === "left") {
         comboCounter++;
         displayUlt(1);
+        APERTURA_CHAR.turnBlock += 0.5 * APERTURA_CHAR.DEX;
     } else {
         comboCounter = 0;
     }
