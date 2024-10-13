@@ -294,6 +294,7 @@ function playCard(handIndex) {
   }
     
   displayEnemyHp();
+  checkEnemyHp();
 }
 
 function endTurn() {
@@ -326,4 +327,14 @@ function endTurn() {
   // console.log("DISCARD_PILE: ", DISCARD_PILE);
   // console.log("HAND: ", HAND);
   // console.log("APERTURA_DECK: ", APERTURA_DECK);
+}
+
+function checkPlayerHp() {
+
+}
+
+function checkEnemyHp() {
+  if(SPAWNED_ENEMY.HP <= 0) {
+    
+  }
 }
