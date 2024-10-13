@@ -215,6 +215,8 @@ function refillDeck() {
 }
 
 function displayEnemyHp() {
+  if(SPAWNED_ENEMY.HP < 0)
+    SPAWNED_ENEMY.HP = 0;
   const ENEMY_HEALTH_BAR = document.getElementById("enemy-health-bar");
   ENEMY_HEALTH_BAR.innerHTML = "";
   for(let i=0; i<SPAWNED_ENEMY.HP; i++) {
