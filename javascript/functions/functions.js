@@ -242,15 +242,11 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-  // ev.dataTransfer.setData("text", ev.target.id);
   ev.dataTransfer.setData("text", ev.target.dataset.cardIndex);
-  // const cardIndex = parseInt(ev.dataTransfer.getData("text"));
-  // document.getElementById("card-in-hand-" + cardIndex).classList.add("hide");
 }
 
 function drop(ev) {
   ev.preventDefault();
-  //ev.target.appendChild(document.getElementById(ev.dataTransfer.getData("text")));
   const cardIndex = parseInt(ev.dataTransfer.getData("text"));
 
   const PLAYED_CARD_INDEX = HAND.findIndex(el => el.indexCardCounter === cardIndex);
